@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+   
+body{
+    background: rgb(226, 224, 224);
+}
+
+.container{
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.logo{
+    display: block;
+    width: 35%;
+    justify-self: center;
+    margin-bottom: 20px;
+}
+
+li{
+    list-style: none;
+}
+
+li a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 20px;
+}
+
+.img-box{
+    height: 150px;
+    width: 100%;
+     
+}
+
+.details{
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+
+.nav-bar{
+    background: rgb(65, 62, 62);
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+.articles{
+    display: grid;
+    grid-template-columns: repeat(3,32%);
+    grid-auto-rows: auto;
+    grid-gap: 2%;
+}
+
+
+.ad{
+   background-image: url(Images/pasta.png);
+   background-size:cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   color: white;
+   grid-column: 1/-1;
+   border-radius: 20px;
+   padding: 20px;
+   position: relative;
+   z-index: 1;
+}
+
+.ad::after{
+    content: '';
+    background: rgb(0, 0, 0);
+    opacity:30%;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+}
+
+.ad .details{
+    width: 75%;
+}
+
+
+.card{
+    background: rgb(228, 211, 182);
+    padding: 10px 20px;
+    border-radius: 20px;
+    
+}
+.card h2{
+    padding: 15px 0px;
+}
+
+.card a{
+    margin-top: auto;
+    color: blue;
+
+}
+
+
+.time{
+    padding: 20px;
+    font-size: 12px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#footer-logo{
+    width: 50px;
+    
+ }
+
+
+#copy{
+        border-top: 2px solid ;
+        flex-basis: 50%;
+        text-align: end;
+        align-self: center;
+    
+}
+
+@media screen and (max-width: 550px) {
+
+    .articles{
+       grid-template-columns: 1fr;
+       grid-gap:2px;
+
+    }
+
+    .logo{
+        display: block;
+        width: 80%;
+        justify-self: center;
+        margin-bottom: 20px;
+    }
+
+    .ad .details{
+        width: 100%;
+    }
+
+    .img-box{
+        display: block;
+        height: 150px;
+        width: 50%;
+        margin-right: auto;
+         margin-left: auto;
+         border: 2px solid;
+    }
+
+}
